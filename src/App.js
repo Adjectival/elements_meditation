@@ -22,7 +22,7 @@ let rule1 = css({
 let rule2 = css({
   color: 'firebrick',
   ':hover': {
-    color: 'red'
+    color: 'white'
   },
   '@media(min-width: 600px)': {
     color: 'navy',

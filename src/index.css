@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: monospace;
 }
 
 .App {
@@ -16,13 +16,14 @@ body {
 }
 
 .App-body-vid {
+  font-size: large;
   position: relative;
 }
 .vidbox1 {
   position: absolute;
-  top: 35%;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: auto !important;
   z-index: -10;
 }
