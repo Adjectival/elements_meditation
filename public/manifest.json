@@ -1,0 +1,15 @@
+{
+  "short_name": "elements_meditation",
+  "name": "elements for meditation",
+  "icons": [
+    {
+      "src":"favicon.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#FF4500",
+  "theme_color": "#FF4500",
+  "display": "standalone"
+}
