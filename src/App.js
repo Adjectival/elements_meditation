@@ -1,26 +1,65 @@
 import React, { Component } from 'react';
 import { Router, browserHistory, Route, Link } from 'react-router';
 import logo from '../public/images/favicon.png';
+import vidblur from '../public/images/looped_blur.mp4';
+import { css } from 'glamor';
 import './App.css';
+
+
+// inline css rules
+let rule1 = css({
+  color: 'red',
+  ':hover': {
+    color: 'pink'
+  },
+  '@media(min-width: 600px)': {
+    color: 'greenyellow',
+    ':hover': {
+      color: 'lime'
+    }
+  }
+})
+let rule2 = css({
+  color: 'firebrick',
+  ':hover': {
+    color: 'red'
+  },
+  '@media(min-width: 600px)': {
+    color: 'navy',
+    ':hover': {
+      color: 'deepskyblue'
+    }
+  }
+})
+
+
 
 const Page = ({ title }) => (
     <div className="App">
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>{title}</h2>
+        <h2>Elements</h2>
       </div>
-      <p className="App-intro">
-        This is the {title} page.
-      </p>
-      <p>
-        <Link to="/">Home</Link>
-      </p>
-      <p>
-        <Link to="/about">About</Link>
-      </p>
-      <p>
-        <Link to="/settings">Settings</Link>
-      </p>
+      <div className="App-body-vid">
+        <p className={`${rule1}`}>
+          This is the {title} page.
+        </p>
+
+        {/*video test*/}
+        <video loop autoPlay className="vidbox1">
+          <source src={vidblur}/>
+        </video>
+
+        <p>
+          <Link to="/" className={`${rule2}`}>Home</Link>
+        </p>
+        <p>
+          <Link to="/about">About</Link>
+        </p>
+        <p>
+          <Link to="/settings">Settings</Link>
+        </p>
+      </div>
     </div>
 );
 
